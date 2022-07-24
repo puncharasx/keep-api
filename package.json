@@ -1,0 +1,42 @@
+{
+  "name": "keep",
+  "version": "1.0.0",
+  "description": "Keep is a keep statement form your slip.",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc & node ./dist/app.js",
+    "start:dev": "nodemon ./src/app.ts", 
+    "test": "test",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "winston": "^3.8.1",
+    "winston-mongodb": "^5.0.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "git add",
+      "eslint --cache --fix"
+    ]
+  }
+}
